@@ -1,8 +1,8 @@
 <?php
-namespace abdullahobaid\sms;
+namespace mabehery\sms;
 
 use Illuminate\Support\ServiceProvider;
-use abdullahobaid\sms\Sms;
+use mabehery\sms\Sms;
 use Config;
 class SmsProvider extends ServiceProvider
 {
@@ -18,7 +18,9 @@ class SmsProvider extends ServiceProvider
       $this->publishes([
         __DIR__.'/config' => base_path('config'),
       ]);
-     }   
+     }
+
+      $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
     }
 
     /**

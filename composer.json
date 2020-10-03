@@ -1,5 +1,5 @@
 {
-    "name": "abdullahobaid/Sms",
+    "name": "mabehery/Sms",
     "description": "A package to send SMS using mobily.ws, smsgw.net API",
     "license": "MIT",
     "type": "package",
@@ -10,7 +10,13 @@
             "name": "Abdullah Obaid",
             "email": "imobde3@gmail.com",
             "homepage": "http://safhty.com",
-            "role": "Developer"
+            "role": "First Developer"
+        },
+        {
+            "name": "Mohamed Behiry",
+            "email": "moh.ali.behery@gmail.com",
+            "homepage": "https://sunsoft.me",
+            "role": "Second Developer"
         }
     ],
     "require": {
@@ -18,17 +24,17 @@
     },
     "autoload": {
        "psr-4": {
-            "abdullahobaid\\sms\\": "src/"
+            "mabehery\\sms\\": "src/"
         }
  
       },
 	"extra": {
         "laravel": {
             "providers": [
-                "abdullahobaid\\sms\\SmsProvider"
+                "mabehery\\sms\\SmsProvider"
             ],
             "aliases": {
-                "SMS": "abdullahobaid\\sms\\Sms"
+                "SMS": "mabehery\\sms\\Sms"
             }
         }
 		},

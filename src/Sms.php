@@ -1,5 +1,5 @@
 <?php
-namespace abdullahobaid\Sms;
+namespace mabehery\Sms;
 
 use App\Http\Controllers\Controller;
 
