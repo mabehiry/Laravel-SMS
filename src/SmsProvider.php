@@ -1,8 +1,8 @@
 <?php
-namespace mabehery\sms;
+namespace mabehiry\sms;
 
 use Illuminate\Support\ServiceProvider;
-use mabehery\sms\Sms;
+use mabehiry\sms\Sms;
 use Config;
 class SmsProvider extends ServiceProvider
 {

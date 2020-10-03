@@ -1,5 +1,5 @@
 <?php
-namespace mabehery\Sms;
+namespace mabehiry\Sms;
 
 use App\Http\Controllers\Controller;
 

@@ -1,5 +1,5 @@
 {
-    "name": "mabehery/Sms",
+    "name": "mabehiry/sms",
     "description": "A package to send SMS using mobily.ws, smsgw.net API",
     "license": "MIT",
     "type": "package",
@@ -24,17 +24,17 @@
     },
     "autoload": {
        "psr-4": {
-            "mabehery\\sms\\": "src/"
+            "mabehiry\\sms\\": "src/"
         }
  
       },
 	"extra": {
         "laravel": {
             "providers": [
-                "mabehery\\sms\\SmsProvider"
+                "mabehiry\\sms\\SmsProvider"
             ],
             "aliases": {
-                "SMS": "mabehery\\sms\\Sms"
+                "SMS": "mabehiry\\sms\\Sms"
             }
         }
 		},

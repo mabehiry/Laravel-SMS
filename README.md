@@ -26,28 +26,28 @@ The default cofing supports mobily.ws and smsgw.net , and you can easily add any
 
 ## Installation
 
-Install with composer by running  `composer require mabehery/sms:dev-master`  
+Install with composer by running  `composer require mabehiry/sms:dev-master`  
 Composer will download and install the package. if you are using Laravel > 5.5 go directly to [Config](#config)
 **if you are using laravel < 5.4 ONLY**
 open `config/app.php` and add the service provider and alias as below:
 
     'providers' => array(
         ...
-        mabehery\sms\SmsProvider::class,
+        mabehiry\sms\SmsProvider::class,
     ),
     .
     .
     .
     'aliases' => array(
         ...
-        'SMS'    => mabehery\sms\SMS::class,
+        'SMS'    => mabehiry\sms\SMS::class,
     ),
 
 ### config
 Publish the configuration file by running the following Artisan command.
 
 ```php
-$ php artisan vendor:publish --provider="mabehery\sms\SmsProvider"
+$ php artisan vendor:publish --provider="mabehiry\sms\SmsProvider"
 ```
 Finally, you need to edit the configuration file at  `config/sms.php` with your own gateway info. Also you need to set your default Gateway at the top of the config file.
 
