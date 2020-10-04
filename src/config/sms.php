@@ -10,7 +10,7 @@ return [
 	| You can override the default gateway at request
     |
     */
-    'default' => 'smsgw.net',
+    'default' => 'mobily.ws',
     /*
     |--------------------------------------------------------------------------
     | SMS Gateway Setup
@@ -72,5 +72,75 @@ return [
                 'sendBulk' => 'http://api.smsgw.net/SendBulkSMS'
             ],
         ],
+        'shamelsms.net' => [
+            'method' => 'get',
+            'senderParameter' => 'sender',
+            'messageParameter' => 'message',
+            'userParameter' => 'username',
+            'passwordParameter' => 'password',
+            'recipientsParameter' => 'mobile',
+            'successCode' => '1',
+            'dateFormat' => 'm/d/Y',
+            'dateParameter' => 'date',
+            'timeFormat' => 'H:i:s',
+            'timeParameter' => 'time',
+            'numbersSeparator' => ',',
+            'parameters' => [
+                'sender' => '',
+                'username' => '', 
+                'password' => '',
+                'unicodetype' => 'u'
+            ],
+            'links' => [
+                'getCredit' => 'http://www.shamelsms.net/api/users.aspx?code=7&',
+                'sendBulk' => 'http://www.shamelsms.net/api/httpSms.aspx'
+            ],
+        ],
+        'malath.net.sa' => [
+            'method' => 'get',
+            'senderParameter' => 'sender',
+            'messageParameter' => 'message',
+            'userParameter' => 'username',
+            'passwordParameter' => 'password',
+            'recipientsParameter' => 'mobile',
+            'successCode' => '0',
+            'dateFormat' => 'm/d/Y',
+            'dateParameter' => 'dateSend',
+            'timeFormat' => 'H:i:s',
+            'timeParameter' => 'timeSend',
+            'numbersSeparator' => ',',
+            'parameters' => [
+                'sender' => '', 
+                'username' => '', 
+                'password' => '', 
+                'unicode' => 'U'
+            ],
+            'links' => [
+                'getCredit' => 'http://sms.malath.net.sa/api/getBalance.aspx',
+                'sendBulk' => 'http://sms.malath.net.sa/httpSmsProvider.aspx'
+            ],
+        ],
+        "unifonic.com" => [            
+            'method' => 'post',
+            'senderParameter' => 'SenderID',
+            'messageParameter' => 'Body',
+            'userParameter' => 'AppSid',
+            'recipientsParameter' => 'Recipient',
+            'successCode' => '0',
+            'dateFormat' => 'yyyy-mm-dd HH:mm:ss',
+            'dateParameter' => 'TimeScheduled',
+            'timeFormat' => '',
+            'timeParameter' => '',
+            'numbersSeparator' => ',',
+            'parameters' => [
+                'sender' => '',
+                'AppSid' => '',
+                'unicode' => 'U'
+            ],
+            'links' => [
+                'getCredit' => 'https://api.unifonic.com/rest/Account/GetBalance',
+                'sendBulk' => 'https://api.unifonic.com/rest/Messages/SendBulk'
+            ],
+        ]
     ],
 ];

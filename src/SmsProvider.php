@@ -1,8 +1,8 @@
 <?php
-namespace mabehiry\sms;
+namespace Mabehiry\Sms;
 
 use Illuminate\Support\ServiceProvider;
-use mabehiry\sms\Sms;
+use Mabehiry\Sms\Sms;
 use Config;
 class SmsProvider extends ServiceProvider
 {
@@ -13,14 +13,17 @@ class SmsProvider extends ServiceProvider
      */
     public function boot()
     {
-     if(!file_exists(base_path('config').'/sms.php'))
-     {
-      $this->publishes([
-        __DIR__.'/config' => base_path('config'),
-      ]);
-     }
+        $this->publishes([
+          __DIR__ . '/config/sms.php' => config_path('sms.php'),
+        ]);
 
-      $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'sms');
+        $this->publishes([
+          __DIR__ . '/../resources/views' => resource_path('views/vendor/sms'),
+        ]);
+
+        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
     }
 
     /**
@@ -31,10 +34,21 @@ class SmsProvider extends ServiceProvider
     public function register()
     {
        
-            $this->app['Sms'] = $this->app->singleton('Sms',function($app)
-            {
-                return new Sms();
-            });
+          $this->app['SMS'] = $this->app->singleton('SMS',function($app)
+          {
+              return new SMS();
+          });
+
+          //$this->app->make('Mabehiry\Sms\Sms');
+
+          app()->bind('ChatifyMessenger', function () {
+            return new \Mabehiry\Sms;
+          });
+
+          $this->mergeConfigFrom(
+            __DIR__ . '/config/sms.php',
+            'sms'
+          );
 
     }
 }

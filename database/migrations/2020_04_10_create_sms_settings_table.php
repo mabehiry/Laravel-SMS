@@ -3,7 +3,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSmsSettingsTable extends Migration
+class SmsSettingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateSmsSettingsTable extends Migration
     public function up()
     {
         Schema::create('sms_settings', function (Blueprint $table) {
-            $table->bigInteger('id');
+            $table->id();
             $table->integer('user_id');
             $table->string('gateway', '20');
             $table->json('parameters');
             $table->timestamps();
             $table->softDeletes();
-            $table->primary('id');
         });
     }
 
