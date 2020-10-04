@@ -41,7 +41,7 @@ class SmsProvider extends ServiceProvider
 
           //$this->app->make('Mabehiry\Sms\Sms');
 
-          app()->bind('ChatifyMessenger', function () {
+          app()->bind('Sms', function () {
             return new \Mabehiry\Sms;
           });
 

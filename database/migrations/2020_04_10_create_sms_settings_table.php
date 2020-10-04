@@ -13,7 +13,7 @@ class SmsSettingsTable extends Migration
     public function up()
     {
         Schema::create('sms_settings', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->integer('user_id');
             $table->string('gateway', '20');
             $table->json('parameters');
