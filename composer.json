@@ -3,7 +3,7 @@
     "description": "A package to send SMS using mobily.ws, smsgw.net API",
     "license": "MIT",
     "type": "package",
-    "version":"1.0.6",
+    "version":"1.0.7",
     "keywords": ["laravel","smsgw.net","mobily.ws"],
     "authors": [
         {
@@ -18,14 +18,13 @@
     },
     "autoload": {
        "psr-4": {
-            "mabehiry\\sms\\": "src/"
+            "Mabehiry\\Sms\\": "src/"
         }
- 
       },
 	"extra": {
         "laravel": {
             "providers": [
-                "mabehiry\\sms\\SmsProvider"
+                "Mabehiry\\Sms\\SmsProvider"
             ],
             "aliases": {
                 "SMS": "Mabehiry\\Sms\\Http\\Controllers\\SmsController"

@@ -34,7 +34,7 @@ class SmsProvider extends ServiceProvider
         'sms'
       );
       
-      //$this->app->make('Sms\Http\Controllers\SmsController');
+      //$this->app->make('Mabehiry\Sms\Http\Controllers\SmsController');
         
       /*
           $this->app['SMS'] = $this->app->singleton('SMS',function($app)
