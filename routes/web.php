@@ -1,9 +1,8 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
-use Mabehiry\Sms\Controllers\Sms;
+use Mabehiry\Sms\Http\Controllers\SmsController;
 
 Route::group(['middleware' => ['web', 'auth']], function () {
-    Route::get('/sms/settings', [Sms::class, 'showSettings']);
-    Route::post('/sms/settings', [Sms::class, 'updateSettings']);
+    Route::get('/sms/settings', [SmsController::class, 'showSettings']);
+    Route::post('/sms/settings', [SmsController::class, 'updateSettings']);
 });

@@ -1,8 +1,7 @@
 <?php
-namespace Mabehiry\Sms\Models;
+namespace Mabehiry\Sms\Http\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\User;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class SmsSetting extends Model

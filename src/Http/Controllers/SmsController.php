@@ -1,15 +1,14 @@
 <?php
-namespace Mabehiry\Sms\Controllers;
+namespace Mabehiry\Sms\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Mabehiry\Sms\Models\SmsSetting;
+use Mabehiry\Sms\Http\Models\SmsSetting;
 
-class SMS extends Controller
+class SmsController extends Controller
 {
     protected static $gateway;
-
 
     public static function run($gatewayName = false)
     {

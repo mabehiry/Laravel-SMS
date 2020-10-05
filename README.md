@@ -47,7 +47,7 @@ open `config/app.php` and add the service provider and alias as below:
 Publish the configuration file by running the following Artisan command.
 
 ```php
-$ php artisan vendor:publish --provider="mabehiry\sms\SmsProvider"
+$ php artisan vendor:publish --provider="Mabehiry\Sms\SmsProvider"
 ```
 Finally, you need to edit the configuration file at  `config/sms.php` with your own gateway info. Also you need to set your default Gateway at the top of the config file.
 
