@@ -29,6 +29,15 @@ class SmsController extends Controller
         static::$gateway = $gatewayProperties;
     }
 
+    public static function getUserGateway()
+    {
+        $smsSetting = SmsSetting::where('user_id', Auth::user()->id)->first();
+        if ($smsSetting) {
+            return $smsSetting->gateway;
+        }
+        return null;
+    }
+
     public function showSettings()
     {
         $smsSetting = SmsSetting::where('user_id', Auth::user()->id)->first();
@@ -78,10 +87,10 @@ class SmsController extends Controller
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($parameters));
-            echo $url . "<br />" . http_build_query($parameters) . "<br />";
+            //echo $url . "<br />" . http_build_query($parameters) . "<br />";
         }else{
             curl_setopt($ch, CURLOPT_URL, $url . "?" . http_build_query($parameters));
-            echo $url."?". http_build_query($parameters)."<br />";
+            //echo $url."?". http_build_query($parameters)."<br />";
         }
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_HEADER, 0);

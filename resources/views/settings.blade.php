@@ -13,9 +13,9 @@
     </head>
     <body>
         <div class="p-4">
-            @if(session()->has('message'))
+            @if(session('message'))
                 <div class="alert alert-success">
-                    {{ session()->get('message') }}
+                    {{ session('message') }}
                 </div>
             @endif
             
