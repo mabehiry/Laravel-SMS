@@ -22,6 +22,31 @@ return [
     |
     */
     'gateways' => [
+        'AlfaCell' => [
+            'method' => 'post',
+            'senderParameter' => 'sender',
+            'messageParameter' => 'msg',
+            'userParameter' => 'apiKey',
+            'passwordParameter' => 'apiKey',
+            'recipientsParameter' => 'numbers',
+            'successCode' => '1',
+            'dateFormat' => 'm/d/Y',
+            'dateParameter' => 'dateSend',
+            'timeFormat' => 'H:i:s',
+            'timeParameter' => 'timeSend',
+            'numbersSeparator' => ',',
+            'parameters' => [
+                'sender' => '', // Alfacell Sender Name
+                'apiKey' => '', // Alfacell API key
+                'applicationType' => '68',
+                'domainName' => '',
+                'lang' => 3
+            ],
+            'links' => [
+                'getCredit' => 'http://www.mobily.ws/api/balance.php',
+                'sendBulk' => 'http://www.mobily.ws/api/msgSend.php'
+            ],
+        ], 
         'mobily.ws' => [
             'method' => 'post',
             'senderParameter' => 'sender',

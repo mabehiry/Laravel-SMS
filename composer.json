@@ -3,7 +3,7 @@
     "description": "A package to send SMS using mobily.ws, smsgw.net API",
     "license": "MIT",
     "type": "package",
-    "version":"1.0.8",
+    "version":"1.0.9",
     "keywords": ["laravel","smsgw.net","mobily.ws"],
     "authors": [
         {
