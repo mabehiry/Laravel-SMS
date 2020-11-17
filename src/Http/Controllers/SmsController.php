@@ -151,7 +151,7 @@ class SmsController extends Controller
         elseif (starts_with($number, '00'))
             return preg_replace('/^00/', '', $number);
         elseif (starts_with($number, '+'))
-            return preg_replace('/^+/', '', $number);
+            return preg_replace('/^\+/', '', $number);
         return $number;
     }
 
