@@ -1,5 +1,5 @@
 <?php
-namespace Mabehiry\Sms\Http\Models;
+namespace Mabehiry\Sms\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
